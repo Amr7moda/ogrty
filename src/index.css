@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Cairo', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  
+  /* Egyptian themed colors */
+  --color-egyptian-red: #C8102E;
+  --color-egyptian-gold: #FFD700;
+  --color-egyptian-blue: #0066CC;
+  --color-egyptian-green: #00A651;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-bounce-gentle {
+  animation: bounceGentle 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
