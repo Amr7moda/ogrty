@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import type { SeatStatus, VehicleType } from '../types';
 
 export const useSeatManagement = (vehicleType: VehicleType, onSeatPaid?: (feePerPerson: number) => void) => {

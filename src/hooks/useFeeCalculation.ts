@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const useFeeCalculation = () => {
   const [feePerPerson, setFeePerPerson] = useState<string>('5');

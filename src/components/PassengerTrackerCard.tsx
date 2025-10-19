@@ -58,14 +58,12 @@ export const PassengerTrackerCard = ({
 
       <div className="max-h-[500px] overflow-y-auto custom-scrollbar">
         <SeatSelection
-          t={t}
           vehicleType={vehicleType}
           setVehicleType={setVehicleType}
           getSeatRows={getSeatRows}
           getSeatStatus={getSeatStatus}
           toggleSeat={toggleSeat}
           feePerPerson={feePerPerson}
-          statistics={statistics}
         />
       </div>
 

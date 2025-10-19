@@ -1,30 +1,22 @@
-import { CheckCircle2, XCircle, Bus, Users } from 'lucide-react';
-import type { Translations, VehicleType } from '../types';
+import { CheckCircle2, XCircle } from 'lucide-react';
+import type { VehicleType } from '../types';
 
 interface SeatSelectionProps {
-  t: Translations;
   vehicleType: VehicleType;
   setVehicleType: (type: VehicleType) => void;
   getSeatRows: () => Array<{ leftSeats: number[]; rightSeats: number[] }>;
   getSeatStatus: (seatNumber: number) => 'empty' | 'occupied' | 'paid';
   toggleSeat: (seatNumber: number, feePerPerson?: number) => void;
   feePerPerson: number;
-  statistics: {
-    paidPassengers: number;
-    occupiedPassengers: number;
-    emptySeats: number;
-  };
 }
 
 export const SeatSelection = ({
-  t,
   vehicleType,
   setVehicleType,
   getSeatRows,
   getSeatStatus,
   toggleSeat,
-  feePerPerson,
-  statistics
+  feePerPerson
 }: SeatSelectionProps) => {
   return (
     <div className="max-w-2xl mx-auto">
